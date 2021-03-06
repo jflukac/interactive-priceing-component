@@ -18,43 +18,48 @@
 </head>
 
 <body>
-    <svg class="bgPattern" xmlns="http://www.w3.org/2000/svg" width="1440" height="449"><path fill="#F1F5FE" fill-rule="evenodd" d="M0 0h1440v449H191.5C85.737 449 0 363.263 0 257.5V0z"/></svg>
     <div class="title">
-        <svg class="patternCircles" xmlns="http://www.w3.org/2000/svg" width="146" height="145"><g fill="none" fill-rule="evenodd" stroke="#CFD8EF"><circle cx="63" cy="82" r="62.5"/><circle cx="105" cy="41" r="40.5"/></g></svg> 
-        <h2>Simple, traffic-based pricing</h2>
-        <p>Sign-up for our 30-day trial. No credit card required.</p>
+        <h2 class="titleHeader">Simple, traffic-based pricing</h2>
+        <p class="titleParagraph">Sign-up for our 30-day trial. No credit card required.</p>
     </div>
     
     <div class="whiteBox">
         <div class="priceing">
             <div class="priceSlider">
-                <p class="pageViews">Pageviews</p>
-                <input type="range" name="priceRange" id="priceRange" min="10" max="100">
-                <p class="monthlyPrice"><span class="bold"> $ 8</span>/month</p>
+                <p class="pageViews">100K Pageviews</p>
+                <datalist id="viewsPrice">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                    <option value="5"></option>
+                </datalist>
+                <input type="range" name="priceRange" id="priceRange" list="viewsPrice" step="1" max="100" min="10">
+                <p class="monthlyPrice"><span class="bold"> $16.00</span>/month</p>
             </div>
             <div class="yearlyDiscount">
-                <p>Monthly Billing</p>
+                <p class="monthlyBilling">Monthly Billing</p>
                 <label class="switch">
                     <input type="checkbox">
                     <span class="slider round"></span>
                 </label>
-                <p>Yearly Billing <span class="discountAll">25% <span class="discountWord">discount</span></span></p> 
+                <p class="yearlyBilling">Yearly Billing <span class="discountAll">-25% <span class="discountWord">discount</span></span></p> 
             </div>
         </div>
         
         <div class="benefitsAndButton">
             <div class="benefits">
-                <div>
+                <div class="benefit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
-                    <span>Unlimited websites</span>
+                    <span class="benefitText">Unlimited websites</span>
                 </div>
-                <div>
+                <div class="benefit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
-                    <span>100% data ownership</span>
+                    <span class="benefitText">100% data ownership</span>
                 </div>
-                <div>
+                <div class="benefit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
-                    <span>Email reports</span>
+                    <span class="benefitText">Email reports</span>
                 </div>
             </div>
             <button class="submit">
